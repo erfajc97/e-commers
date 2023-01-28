@@ -1,0 +1,23 @@
+
+
+@media screen and (min-width: 1470px) {
+
+.container_filters{
+    margin-top: 4rem;
+}   
+
+.container_navBar{
+   
+    margin-top: 2rem;
+}
+ .brand{
+    padding-right: 50rem;
+    font-size: 30px;
+  
+}
+.title_links_nav{
+    font-size: 18px !important;
+   
+}
+}
+
