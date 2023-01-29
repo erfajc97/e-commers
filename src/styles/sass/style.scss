@@ -108,7 +108,7 @@ $redPrincipal: #f85555;
 .container_principal_Details {
   width: 100%;
   margin: 0 auto;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .title_details{
@@ -271,7 +271,7 @@ $redPrincipal: #f85555;
   display: flex;
   flex-direction: row;
   gap: 10rem;
-  margin-bottom: 7rem;
+  margin-bottom: 1rem;
   margin-top: 3rem;
 
   justify-content: space-between;
@@ -303,7 +303,9 @@ $redPrincipal: #f85555;
  
 }
 
-
+.title_details{
+  font-size: 25px;
+}
 
   
   
