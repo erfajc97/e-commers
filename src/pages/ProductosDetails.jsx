@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Carousel } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { filterProductThunk } from "../store/slices/products.slice";
@@ -29,7 +30,8 @@ const ProductosDetails = () => {
 
   return (
     <div className="container_principal_Details">
-      <br /><br />
+      <br />
+      <br />
       <div className="container_principal_info_details">
         <div className="container_title_details">
           <h2
@@ -45,13 +47,40 @@ const ProductosDetails = () => {
           </h3>
         </div>
         <div className="container_info_productos_details">
-          <div className="container_imgPrincipal">
-            <img
-              className="img_product_datails"
-              src={product.images?.[0].url}
-              alt=""
-            />
-          </div>
+          <Carousel>
+            <Carousel.Item>
+              <div className="container_imgPrincipal">
+                <img
+                  className="img_product_datails"
+                  src={product.images?.[0].url}
+                  alt=""
+                />
+              </div>
+              <Carousel.Caption></Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="container_imgPrincipal">
+                <img
+                  className="img_product_datails"
+                  src={product.images?.[1].url}
+                  alt=""
+                />
+              </div>
+              <Carousel.Caption></Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="container_imgPrincipal">
+                <img
+                  className="img_product_datails"
+                  src={product.images?.[2].url}
+                  alt=""
+                />
+              </div>
+
+              <Carousel.Caption></Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+
           <div className="container_info_description">
             <div className="container_info_details">
               <h3 style={{ color: "grey" }}> {product.brand} </h3>
@@ -60,8 +89,7 @@ const ProductosDetails = () => {
               </h3>
               <div className="container_price_details">
                 <div className="container_description">
-
-                <p> {product.description} </p>
+                  <p> {product.description} </p>
                 </div>
                 <p style={{ color: "grey" }}>Price:</p>
                 <h4 className="ps-3">
