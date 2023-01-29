@@ -77,6 +77,8 @@ const Home = () => {
 
       <div className="container_products">
         <div className="container_button_search">
+          <br />
+          <br />
           <InputGroup className="mb-3">
             <Form.Control
               placeholder="Search your Product"
@@ -119,14 +121,22 @@ const Home = () => {
               </div>
               <br />
               <hr />
-              <div style={{position:"relative"}} className="container_info_products">
+              <div
+                style={{ position: "relative" }}
+                className="container_info_products">
                 <p style={{ color: "grey" }}> {product.brand} </p>
                 <b className="ps-3"> {product.title} </b>
                 <p style={{ color: "grey" }}>Price:</p>
                 <b className="ps-3"> ${product.price} </b>
 
-                <div style={{position:"absolute", bottom:"0.1rem",right:"0.5rem"}} className="container_buttom_cart">
-                  <button className="buttom_cart" >
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "0.1rem",
+                    right: "0.5rem",
+                  }}
+                  className="container_buttom_cart">
+                  <button className="buttom_cart">
                     <i className="bx bx-cart-add bx-sm"></i>{" "}
                   </button>
                 </div>

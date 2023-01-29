@@ -29,6 +29,7 @@ const ProductosDetails = () => {
 
   return (
     <div className="container_principal_Details">
+      <br /><br />
       <div className="container_principal_info_details">
         <div className="container_title_details">
           <h2

@@ -20,7 +20,7 @@ function App() {
       <HashRouter>
         <AppNavBar  />
         { loading && <Loading/>}
-        <br /><br /><br /> <br />
+        <br /><br />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductosDetails />} />
