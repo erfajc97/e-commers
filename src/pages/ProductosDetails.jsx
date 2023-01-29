@@ -58,6 +58,10 @@ const ProductosDetails = () => {
                 <b>{product.title}</b>
               </h3>
               <div className="container_price_details">
+                <di className="container_description">
+
+                <p> {product.description} </p>
+                </di>
                 <p style={{ color: "grey" }}>Price:</p>
                 <h4 className="ps-3">
                   <b>{product.price}</b>
@@ -86,7 +90,6 @@ const ProductosDetails = () => {
             <button className="add-to-card-details">
               Add to card <i className="bx bx-cart"></i>
             </button>
-            <p> {product.description} </p>
           </div>
         </div>
         <br />

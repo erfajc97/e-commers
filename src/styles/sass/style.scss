@@ -22,7 +22,7 @@ $redPrincipal: #f85555;
 
 .container_products_list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -176,7 +176,7 @@ $redPrincipal: #f85555;
 
 .container_suggested ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -221,7 +221,8 @@ $redPrincipal: #f85555;
   bottom: 0.5rem;
 }
 
-@media screen and (min-width: 1240px) {
+
+@media screen and (min-width: 1100px) {
   .container_principal_home {
     width: 100%;
     display: flex;
@@ -235,7 +236,7 @@ $redPrincipal: #f85555;
 
 // ----Productos Details---
 .container_principal_Details {
-  width: 90%;
+  width: 95%;
 
 }
 
@@ -259,48 +260,36 @@ $redPrincipal: #f85555;
 }
 
 .container_imgPrincipal{
-  width: 600px;
+  width: 500px;
 
   height: 300px;
+}
+
+.container_description p{
+
+    height: 200px;
+    overflow-x: hidden;
 }
 
 .img_product_datails{
   width: 600px;
   height: 100%;
+ 
 }
 
-.container_principal_info_details{
-  position: relative;
-}
+
 
 .container_info_description{
 
   display: flex;
   flex-direction: column; 
-  width: 650px;
-  height: 300px;
-  margin-top: -4rem;
-}
-.add-to-card-details{
-  position: absolute;
-  bottom: 4rem;
-  width: 46%;
-  right: 0;
-
+  width: 100%;
+  height: 400px;
+  margin-top: -2rem;
+ 
  
 }
-.container_price_details{
-  position: absolute;
-  bottom: -17rem;
-  left: 2rem;
 
-}
-
-.container_quantity_details{
-  position: absolute;
-  bottom: -16.2rem;
-  right: 8rem;
-}
 .container_buttons_quantity p{
   padding: 1rem;
   padding-top: 1rem;
@@ -323,7 +312,9 @@ $redPrincipal: #f85555;
 
 .container_suggest_product{
    height: 400px;
-   width: 100%;
+   width: 80%;
+   margin: 0 auto;
+ 
 }
 
 .container_suggested ul {
@@ -332,21 +323,22 @@ $redPrincipal: #f85555;
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  width: 80%;
   padding-right: 2rem;
-  margin: 0 auto;
   padding-bottom: 5rem;
   
 }
 
 .container_img_suggested {
   height: 200px;
-  width: 80%;
   
 }
 .img_product{
   margin: 0 auto;
+
   object-fit: contain;
-  height: 200px;
+  height: 180px;
+
 
 }
 
