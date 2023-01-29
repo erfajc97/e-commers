@@ -222,7 +222,10 @@ $redPrincipal: #f85555;
 }
 
 
-@media screen and (min-width: 1100px) {
+
+
+@media screen and (min-width: 1300px) {
+
   .container_principal_home {
     width: 100%;
     display: flex;
@@ -260,9 +263,9 @@ $redPrincipal: #f85555;
 }
 
 .container_imgPrincipal{
-  width: 500px;
-
+  width: 600px;
   height: 300px;
+
 }
 
 .container_description p{
@@ -272,7 +275,7 @@ $redPrincipal: #f85555;
 }
 
 .img_product_datails{
-  width: 600px;
+  width: 500px;
   height: 100%;
  
 }

@@ -58,10 +58,10 @@ const ProductosDetails = () => {
                 <b>{product.title}</b>
               </h3>
               <div className="container_price_details">
-                <di className="container_description">
+                <div className="container_description">
 
                 <p> {product.description} </p>
-                </di>
+                </div>
                 <p style={{ color: "grey" }}>Price:</p>
                 <h4 className="ps-3">
                   <b>{product.price}</b>
