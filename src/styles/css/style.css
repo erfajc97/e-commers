@@ -216,6 +216,10 @@
     margin-top: 3rem;
     justify-content: space-between; }
 
+  .container_imgPrincipal {
+    width: 600px;
+    height: 500px; }
+
   .img_product_datails {
     width: 400px;
     height: 100%;
