@@ -9,6 +9,7 @@ import Purchases from './pages/Purchases'
 import AppNavBar from './components/AppNavBar'
 import Loading from './components/Loading'
 import { useSelector } from 'react-redux'
+import ProtectedRoutes from './components/ProtectedRoutes'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -25,8 +26,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductosDetails />} />
           <Route path="/login/" element={<Login />} />
+
+          <Route element={ <ProtectedRoutes/> } >
+
           <Route path="/purchases/" element={<Purchases />} />
+
+          </Route>
+
         </Routes>
+
       </HashRouter>
     </div>
   );

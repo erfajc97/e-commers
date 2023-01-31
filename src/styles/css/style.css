@@ -181,6 +181,10 @@
   right: 0.2rem;
   bottom: 0.5rem; }
 
+.container_login {
+  width: 80%;
+  margin: 0 auto; }
+
 @media screen and (min-width: 730px) and (max-width: 989px) {
   .container_suggested ul {
     display: grid;

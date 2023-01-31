@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
+import   purchasesSlice from './slices/purchases.slice'
 import isLoadingSlice from './slices/isLoading.slice'
 import productsSlice  from './slices/products.slice'
 
 export default configureStore({
     reducer: {
         isLoiding: isLoadingSlice,
-        products: productsSlice
+        products: productsSlice,
+        purchases: purchasesSlice
     }
 })
