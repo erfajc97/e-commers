@@ -226,6 +226,11 @@ li {
 .quaintity-info {
   display: flex; }
 
+.btn-quantity {
+  border: 0.1rem solid;
+  padding: 0.3rem 1rem;
+  margin-top: 1rem; }
+
 .btndelete-cart {
   position: absolute;
   top: -1rem;

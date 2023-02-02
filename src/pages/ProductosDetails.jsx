@@ -119,21 +119,20 @@ const ProductosDetails = () => {
                   <button
                     disabled={quantity <= 1}
                     onClick={decrementQuantity}
-                    className="buttom_quantity">
+                    style={{ width: "30px", height: "30px" }}>
                     {" "}
                     -{" "}
                   </button>
 
                   <input
-                    style={{ width: "10%", padding: "0.5rem" }}
-                    className="btn-quantity"
+                    style={{ width: "30px", height: "30px", paddingLeft:'0.5rem' }}
                     type="text"
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
                   />
 
                   <button
-                    className="buttom_quantity"
+                    style={{ width: "30px", height: "30px" }}
                     onClick={incrementQuantity}>
                     {" "}
                     +{" "}

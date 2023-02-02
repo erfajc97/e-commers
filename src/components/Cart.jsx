@@ -24,6 +24,7 @@ const Cart = ({ show, handleClose }) => {
         <div className='container_all_cart' >
           {addProduct.map((product, i) => (
             <div className='container_cart_general' key={i}>
+              
               <div className="container_img_cart">
 
               <img
@@ -50,8 +51,6 @@ const Cart = ({ show, handleClose }) => {
                   </button>
                 </div>
               </div>
-
-
               {/* <div className="price-total">
                 <span>Total:</span>
                 <strong>{`$${
