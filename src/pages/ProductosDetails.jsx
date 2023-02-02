@@ -30,11 +30,15 @@ const ProductosDetails = () => {
   // console.log(product);
 
   const addProduct = () => {
+      if (localStorage.getItem("token") === "") {
+          navigate("/login/");
+        } else {
     const productId = {
       quantity: quantity,
       productId: product.id,
     };
     dispatch(addproductIdThunk(productId));
+  }
   };
 
   const decrementQuantity = () => {

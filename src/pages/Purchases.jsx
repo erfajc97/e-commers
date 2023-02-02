@@ -37,7 +37,7 @@ const Purchases = () => {
 
                     <img
                       className="img-purchase"
-                      src={purchase.product?.images[2].url}
+                      src={purchase.product?.images[0].url}
                       alt=""
                       />
                       </div>

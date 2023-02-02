@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { addproductIdThunk } from "../store/slices/cart.slice";
 
 import {
   filterProductThunk,
@@ -66,6 +67,18 @@ const Home = () => {
       //     )
       //   );
       // };
+
+      const addProduct = (itemId) => {
+        if (localStorage.getItem("token") === "") {
+          navigate("/login/");
+        } else {
+          const productId = {
+            quantity: 1,
+            productId: itemId,
+          };
+          dispatch(addproductIdThunk(productId));
+        }
+      };
 
   return (
     <div className="container_principal_home">
@@ -139,46 +152,51 @@ const Home = () => {
           </Button>
         </div>
 
-        <ul className="container_products_list">
+        <div className="container_products_list">
           {productsList?.map((product) => (
-            <li
-              className="products_list"
-              key={product.id}
-              onClick={() => navigate(`/product/${product.id}`)}>
+            <div className="products_list" key={product.id}>
               <br />
-              <div className="container_img_product">
-                <img
-                  className="img_product"
-                  src={product.images[0].url}
-                  alt=""
-                  style={{ width: 300 }}
-                />
-              </div>
-              <br />
-              <hr />
-              <div
-                style={{ position: "relative" }}
-                className="container_info_products">
-                <p style={{ color: "grey" }}> {product.brand} </p>
-                <b className="ps-3"> {product.title} </b>
-                <p style={{ color: "grey" }}>Price:</p>
-                <b className="ps-3"> ${product.price} </b>
-
+              <div>
                 <div
-                  style={{
-                    position: "absolute",
-                    bottom: "0.1rem",
-                    right: "0.5rem",
-                  }}
-                  className="container_buttom_cart">
-                  <button className="buttom_cart">
-                    <i className="bx bx-cart-add bx-sm"></i>{" "}
-                  </button>
+                  style={{ cursor:"pointer" }}
+                  onClick={() => navigate(`/product/${product.id}`)}
+                  className="container_img_product">
+                  <img
+                    className="img_product"
+                    src={product.images[0].url}
+                    alt=""
+                    style={{ width: 300 }}
+                  />
+                </div>
+                <br />
+                <hr />
+                <div
+                  style={{ position: "relative" }}
+                  className="container_info_products">
+                  <p style={{ color: "grey" }}> {product.brand} </p>
+                  <b className="ps-3"> {product.title} </b>
+                  <p style={{ color: "grey" }}>Price:</p>
+                  <b className="ps-3"> ${product.price} </b>
+
+                  <div
+                    style={{
+                      // position: "absolute",
+                      bottom: "0.1rem",
+                      right: "0.5rem",
+                      zIndex: "1001",
+                    }}
+                    className="container_buttom_cart">
+                    <button
+                      onClick={() => addProduct(product.id)}
+                      className="buttom_cart">
+                      <i className="bx bx-cart-add bx-sm"></i>{" "}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
         <br />
         <br />
         <br />

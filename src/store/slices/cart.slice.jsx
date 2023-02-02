@@ -34,7 +34,7 @@ export const addproductIdThunk = (productId) => (dispatch) => {
       getConfig()
     )
     .then((res) => dispatch(getCartThunk(res.data)))
-    .catch(() => alert("hubo un error"))
+    .catch(() => alert("you are not logged in"))
     .finally(() => dispatch(setIsloading(false)));
 };
 
