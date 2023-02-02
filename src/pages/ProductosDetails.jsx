@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { addproductIdThunk } from "../store/slices/cart.slice";
 import { filterProductThunk } from "../store/slices/products.slice";
 
 const ProductosDetails = () => {
@@ -15,7 +16,7 @@ const ProductosDetails = () => {
   const filterAllProducts = productSuggested.filter(
     (product) => product.id !== Number(id)
   );
-
+    const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     axios
       .get(`https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`)
@@ -27,6 +28,22 @@ const ProductosDetails = () => {
   }, [id]);
 
   // console.log(product);
+
+  const addProduct = () =>{
+    const productId = {
+      quantity: quantity,
+      productId: product.id,
+    };
+    dispatch(addproductIdThunk(productId));
+  }
+
+      const decrementQuantity = () => {
+        setQuantity(quantity - 1);
+      };
+
+      const incrementQuantity = () => {
+        setQuantity(quantity + 1);
+      };
 
   return (
     <div className="container_principal_Details">
@@ -82,7 +99,7 @@ const ProductosDetails = () => {
           </Carousel>
 
           <div className="container_info_description">
-            <div className="container_info_details">
+            <div style={ {position:"relative"}} className="container_info_details">
               <h3 style={{ color: "grey" }}> {product.brand} </h3>
               <h3 className="ps-3">
                 <b>{product.title}</b>
@@ -101,22 +118,33 @@ const ProductosDetails = () => {
                 <p style={{ color: "grey" }}>Quantity</p>
                 <div className="container_buttons_quantity ms-5 ">
                   <button
-                    className="buttom_quantity"
-                    onClick={() => setCounter(counter - 1)}
-                    disabled={counter === 0}>
-                    -
+                    disabled={quantity <= 1}
+                    onClick={decrementQuantity}
+                    className="buttom_quantity">
+                    {" "}
+                    -{" "}
                   </button>
-                  <p>{counter}</p>
+                  
+                    <input 
+                       style={{width:'10%',padding:"0.5rem"}}
+                      className="btn-quantity"
+                      type="text"
+                      value={quantity}
+                      onChange={(e) => setQuantity(e.target.value)}
+                    />
+               
+
                   <button
                     className="buttom_quantity"
-                    onClick={() => setCounter(counter + 1)}>
+                    onClick={incrementQuantity}>
                     {" "}
                     +{" "}
                   </button>
                 </div>
               </div>
             </div>
-            <button className="add-to-card-details">
+
+            <button onClick={addProduct} className="add-to-card-details">
               Add to card <i className="bx bx-cart"></i>
             </button>
           </div>

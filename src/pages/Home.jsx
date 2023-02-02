@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+
 import {
   filterProductThunk,
   filterTitleThunk,
@@ -42,9 +43,43 @@ const Home = () => {
   }, []);
 
   // console.log(category);
+      //  const [products, setProducts] = useState([]);
+      //  const [filteredProducts, setFilteredProducts] = useState([]);
+
+      // useEffect(() => {
+      //   const fetchData = async () => {
+      //     const result = await axios.get(
+      //       "https://e-commerce-api-v2.academlo.tech/api/v1/products"
+      //     );
+      //     setProducts(result.data);
+      //     setFilteredProducts(result.data);
+      //   };
+
+      //   fetchData();
+      // }, []);
+
+      // const handleFilter = (priceRange) => {
+      //   setFilteredProducts(
+      //     products.filter(
+      //       (product) =>
+      //         product.price >= priceRange.min && product.price <= priceRange.max
+      //     )
+      //   );
+      // };
 
   return (
     <div className="container_principal_home">
+      {/* <>
+        <PriceFilter onFilter={handleFilter} />
+        <ul>
+          {filteredProducts.map((product) => (
+            <li key={product.id}>
+              {product.name} ({product.price})
+            </li>
+          ))}
+        </ul>
+      </> */}
+
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton></Offcanvas.Header>
         <Offcanvas.Body>

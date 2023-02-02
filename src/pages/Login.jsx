@@ -34,9 +34,26 @@ const Login = () => {
   };
 
   return (
-    <div className="container_login">
+    <div style={{ position: "relative" }} className="container_login">
       <br />
       <br />
+      <div className="container_credenciales">
+        <strong className="welcome_login">
+          Welcome! Enter your email and password to continue
+        </strong>
+        <br />
+
+        <strong className="idication-login">
+          You have to Log In to access to your cart
+        </strong>
+        <br />
+
+        <div className="tex-data-login">
+          <strong className="tes-data">Test Data</strong>
+          <i className="bx bx-envelope"> john@gmail.com</i>
+          <i className="bx bx-key"> john1234</i>
+        </div>
+      </div>
       <Form onSubmit={handleSubmit(submit)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -59,7 +76,10 @@ const Login = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button
+          style={{ position: "absolute", right: "0.5rem" }}
+          variant="primary"
+          type="submit">
           Submit
         </Button>
       </Form>
