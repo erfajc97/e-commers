@@ -59,35 +59,7 @@ li{
 }
 
 
-.container_quantity_details{
-  position: absolute;
-  bottom: 0.5rem;
-  right: 2rem;
-  
-}
 
-.container_buttons_quantity{
-  display: flex;
-  height: 30px;
-  
-}
-.container_buttons_quantity p{
-  padding: 0.75rem;
-  padding-top: 1rem;
-  border: 0.1rem solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
- 
-}
-
-.buttom_quantity{
-  border-radius: 3px;
-   &:hover{
-    transform: scale(1.1);
-  }
-}
 
 
 .buttom_cart {
@@ -111,6 +83,10 @@ li{
 }
 
 // ----Productos Details---
+
+.phonedescription{
+  display: none;
+}
 .container_principal_Details {
   width: 100%;
   margin: 0 auto;
@@ -156,9 +132,33 @@ li{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 92%;
+ 
   gap: 0.5rem;
   position: relative;
+  width: 100%;
+}
+
+.container_quantity_details{
+  position: absolute;
+  bottom: 0.5rem;
+  left: 60%;
+  
+}
+
+
+.container_buttons_quantity{
+  display: flex;
+  height: 30px;
+  
+}
+
+
+
+.buttom_quantity{
+  border-radius: 3px;
+   &:hover{
+    transform: scale(1.1);
+  }
 }
 
 .add-to-card-details{
@@ -292,11 +292,7 @@ li{
 .quaintity-info{
   display: flex;
 }
-.btn-quantity{
-  border: 0.2rem solid;
-  padding: 0.25rem 1rem;
-  margin-top: 0.5rem;
-}
+
 
 .btndelete-cart{
   position: absolute;
@@ -433,6 +429,12 @@ li{
 
 @media screen and (min-width: 1300px) and (max-width: 1500px) {
 
+  .phonedescription{
+    display: block;
+  }
+  .pcdescription{
+    display: none;
+  }
   .container_info_productos_details {
   display: flex;
   flex-direction: row;
@@ -451,7 +453,7 @@ li{
 
 .img_product_datails{
   width: 400px;
-  height: 100%;
+  height: 70%;
   margin-top: 10rem;
  
 }
@@ -490,6 +492,13 @@ li{
 
 
 @media screen and (min-width: 1501px) {
+  .phonedescription{
+    display: block;
+  }
+
+  .pcdescription{
+    display: none;
+  }
 
   .container_principal_home {
     width: 100%;
@@ -559,16 +568,7 @@ li{
  
 }
 
-.container_buttons_quantity p{
-  padding: 1rem;
-  padding-top: 1rem;
-  border: 0.1rem solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
- 
-}
+
 
 .buttom_quantity{
   border-radius: 3px;

@@ -16,7 +16,7 @@ const ProductosDetails = () => {
   const filterAllProducts = productSuggested.filter(
     (product) => product.id !== Number(id)
   );
-    const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     axios
       .get(`https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`)
@@ -29,21 +29,21 @@ const ProductosDetails = () => {
 
   // console.log(product);
 
-  const addProduct = () =>{
+  const addProduct = () => {
     const productId = {
       quantity: quantity,
       productId: product.id,
     };
     dispatch(addproductIdThunk(productId));
-  }
+  };
 
-      const decrementQuantity = () => {
-        setQuantity(quantity - 1);
-      };
+  const decrementQuantity = () => {
+    setQuantity(quantity - 1);
+  };
 
-      const incrementQuantity = () => {
-        setQuantity(quantity + 1);
-      };
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
 
   return (
     <div className="container_principal_Details">
@@ -97,15 +97,14 @@ const ProductosDetails = () => {
               <Carousel.Caption></Carousel.Caption>
             </Carousel.Item>
           </Carousel>
-
           <div className="container_info_description">
-            <div style={ {position:"relative"}} className="container_info_details">
+            <div className="container_info_details">
               <h3 style={{ color: "grey" }}> {product.brand} </h3>
               <h3 className="ps-3">
                 <b>{product.title}</b>
               </h3>
               <div className="container_price_details">
-                <div className="container_description">
+                <div className="container_description phonedescription">
                   <p> {product.description} </p>
                 </div>
                 <p style={{ color: "grey" }}>Price:</p>
@@ -124,15 +123,14 @@ const ProductosDetails = () => {
                     {" "}
                     -{" "}
                   </button>
-                  
-                    <input 
-                       style={{width:'10%',padding:"0.5rem"}}
-                      className="btn-quantity"
-                      type="text"
-                      value={quantity}
-                      onChange={(e) => setQuantity(e.target.value)}
-                    />
-               
+
+                  <input
+                    style={{ width: "10%", padding: "0.5rem" }}
+                    className="btn-quantity"
+                    type="text"
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)}
+                  />
 
                   <button
                     className="buttom_quantity"
@@ -147,6 +145,9 @@ const ProductosDetails = () => {
             <button onClick={addProduct} className="add-to-card-details">
               Add to card <i className="bx bx-cart"></i>
             </button>
+          </div>
+          <div className="container_description pcdescription">
+            <p> {product.description} </p>
           </div>
         </div>
         <br />
