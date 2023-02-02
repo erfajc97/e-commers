@@ -49,6 +49,17 @@ const ProductosDetails = () => {
     setQuantity(quantity + 1);
   };
 
+    const addProduct2 = (itemId) => {
+      if (localStorage.getItem("token") === "") {
+        navigate("/login/");
+      } else {
+        const productId = {
+          quantity: 1,
+          productId: itemId,
+        };
+        dispatch(addproductIdThunk(productId));
+      }
+    };
   return (
     <div className="container_principal_Details">
       <br />
@@ -129,7 +140,11 @@ const ProductosDetails = () => {
                   </button>
 
                   <input
-                    style={{ width: "30px", height: "30px", paddingLeft:'0.5rem' }}
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      paddingLeft: "0.5rem",
+                    }}
                     type="text"
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
@@ -161,11 +176,11 @@ const ProductosDetails = () => {
       <div className="container_suggested">
         <ul>
           {filterAllProducts.map((product) => (
-            <li
-              onClick={() => navigate(`/product/${product.id}`)}
-              key={product.id}
-              className="container_suggest_product">
-              <div className="container_img_suggested border-3 border-bottom">
+            <li key={product.id} className="container_suggest_product">
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate(`/product/${product.id}`)}
+                className="container_img_suggested border-3 border-bottom">
                 <img
                   className="img_product"
                   src={product.images?.[0].url}
@@ -181,7 +196,9 @@ const ProductosDetails = () => {
                 <b className="ps-3"> ${product.price} </b>
 
                 <div className="container_buttom_cart">
-                  <button className="buttom_cart">
+                  <button
+                    onClick={() => addProduct2(product.id)}
+                    className="buttom_cart">
                     <i className="bx bx-cart-add bx-sm"></i>
                   </button>
                 </div>
