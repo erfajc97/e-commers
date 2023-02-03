@@ -296,7 +296,7 @@ li {
   width: 20%;
   padding: 0.5rem 1rem; }
 
-@media screen and (min-width: 730px) and (max-width: 989px) {
+@media screen and (min-width: 700px) and (max-width: 989px) {
   .container_suggested ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
