@@ -8,6 +8,13 @@ const Cart = ({ show, handleClose }) => {
 
     const addProduct = useSelector(state => state.cart)
     const dispatch = useDispatch();
+    
+    let total = 0
+    addProduct.forEach(product => {
+      const productTotal = Number(product.product.pice) * product.quantity;
+      total+= productTotal  
+    });
+
 
     useEffect(()=>{
         dispatch(getCartThunk());
@@ -84,7 +91,9 @@ const Cart = ({ show, handleClose }) => {
         <br />
         <br />
 
+
         <div className="container_checkOut">
+        
           <button
             className="btn-CheckOut"
             onClick={() => dispatch(purchasesCartThunk())}>

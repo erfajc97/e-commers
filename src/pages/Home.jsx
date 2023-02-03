@@ -40,7 +40,6 @@ const Home = () => {
 
   const range = () => {
     
-    console.log(min);
     const filterAllProducts = productsList.filter((product) => {
       return +product.price <= +max && +product.price >= +min;
     });

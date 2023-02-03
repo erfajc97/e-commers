@@ -8,7 +8,7 @@ import Cart from './Cart';
 const AppNavBar = () => {
 
     const navigate =useNavigate();
-    
+  
 
     const logout = () =>{
       localStorage.setItem("token", "");
@@ -46,14 +46,14 @@ const AppNavBar = () => {
                 <Nav.Link
                   onClick={handleShow}
                   className="title_links_nav"
-                  as={Link}
-                    >
+                  as={Link}>
                   Cart
                 </Nav.Link>
-
-                <Nav.Link className="title_links_nav" onClick={logout}>
-                  Logout
-                </Nav.Link>
+                
+                  <Nav.Link className="title_links_nav" onClick={logout}>
+                    Logout
+                  </Nav.Link>
+              
               </Nav>
             </Navbar.Collapse>
           </Container>

@@ -30,8 +30,7 @@ li {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border-radius: 7px;
-  box-shadow: 0 4px 8px black; }
+  border-radius: 7px; }
 
 .container_img_product {
   height: 150px;
