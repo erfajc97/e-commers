@@ -9,11 +9,14 @@ const Cart = ({ show, handleClose }) => {
     const addProduct = useSelector(state => state.cart)
     const dispatch = useDispatch();
     
-    let total = 0
-    addProduct.forEach(product => {
-      const productTotal = Number(product.product.pice) * product.quantity;
-      total+= productTotal  
-    });
+   
+      let total = 0
+      addProduct.forEach((product) => {
+        const productTotal = Number(product.product.pice) * product.quantity;
+        total += productTotal;
+      });
+    
+     
 
 
     useEffect(()=>{
@@ -51,14 +54,16 @@ const Cart = ({ show, handleClose }) => {
                     <strong>{product.product?.title}</strong>
                     <div className="quaintity-info">
                       <button
-                        disabled = {product.quantity ===1}
+                        disabled={product.quantity === 1}
                         onClick={() => decrementRate(product)}
                         className="btn-quantity">
                         {" "}
                         -{" "}
                       </button>
                       <div className="btn-quantity">{product.quantity}</div>
-                      <button onClick={() => incrementRate( product)} className="btn-quantity">
+                      <button
+                        onClick={() => incrementRate(product)}
+                        className="btn-quantity">
                         {" "}
                         +{" "}
                       </button>
@@ -88,12 +93,17 @@ const Cart = ({ show, handleClose }) => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
 
+        <div className="sumTotal">
+          <span>Total:</span>
+          <strong>{`$ ${total}`}</strong>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
 
         <div className="container_checkOut">
-        
           <button
             className="btn-CheckOut"
             onClick={() => dispatch(purchasesCartThunk())}>
