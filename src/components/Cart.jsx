@@ -12,7 +12,7 @@ const Cart = ({ show, handleClose }) => {
    
       let total = 0
       addProduct.forEach((product) => {
-        const productTotal = Number(product.product.pice) * product.quantity;
+        const productTotal = Number(product.product.price) * product.quantity;
         total += productTotal;
       });
     

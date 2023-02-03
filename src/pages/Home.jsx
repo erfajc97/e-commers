@@ -28,8 +28,8 @@ const Home = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [min, setMin] = useState(0);
-  const [max, setMax] = useState(0);
+  const [min, setMin] = useState("");
+  const [max, setMax] = useState("");
   const [productsFiltrados, setProductsFiltrados] = useState([]);
 
   useEffect(() => {
@@ -80,12 +80,12 @@ const Home = () => {
         <Offcanvas.Body>
           <div className="container_filters">
             <br /> <br />
-            <Accordion
+           <Accordion
               className=" accordion pe-5 ps-5 mt-5 mb-5"
               defaultActiveKey="0">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
-                  <h3>Prices</h3>
+                  <h3>Prices</h3> 
                 </Accordion.Header>
                 <Accordion.Body>
                   <form onSubmit={range}>
