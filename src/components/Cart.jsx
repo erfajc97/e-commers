@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { deleteProductCarThunk, getCartThunk, purchasesCartThunk } from '../store/slices/cart.slice';
+import { deleteProductCarThunk, getCartThunk, purchasesCartThunk, updateCartThunk } from '../store/slices/cart.slice';
 
 const Cart = ({ show, handleClose }) => {
 
@@ -13,7 +13,13 @@ const Cart = ({ show, handleClose }) => {
         dispatch(getCartThunk());
     },[])
 
+      const incrementRate = (product) => {
+        dispatch(updateCartThunk(product.id, product.quantity + 1));
+      };
 
+      const decrementRate = (product) => {
+        dispatch(updateCartThunk(product.id, product.quantity - 1));
+      };
 
   return (
     <Offcanvas placement="end" show={show} onHide={handleClose}>
@@ -37,9 +43,18 @@ const Cart = ({ show, handleClose }) => {
                   <div>
                     <strong>{product.product?.title}</strong>
                     <div className="quaintity-info">
-                      <button className="btn-quantity"> - </button>
+                      <button
+                        disabled = {product.quantity ===1}
+                        onClick={() => decrementRate(product)}
+                        className="btn-quantity">
+                        {" "}
+                        -{" "}
+                      </button>
                       <div className="btn-quantity">{product.quantity}</div>
-                      <button className="btn-quantity"> + </button>
+                      <button onClick={() => incrementRate( product)} className="btn-quantity">
+                        {" "}
+                        +{" "}
+                      </button>
                     </div>
                   </div>
                   <div>
@@ -59,7 +74,7 @@ const Cart = ({ show, handleClose }) => {
                 <strong>{`$${
                   product.quantity * parseInt(product.product?.price)
                 }`}</strong>
-              </div> 
+              </div>
             </div>
           ))}
         </div>

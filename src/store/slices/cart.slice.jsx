@@ -61,6 +61,22 @@ export const deleteProductCarThunk = (id) => (dispatch) => {
     .then(() => dispatch(getCartThunk()))
     .finally(() => dispatch(setIsloading(false)));
 };
+
+
+export const updateCartThunk = (id,quantity) => (dispatch) => {
+    dispatch(setIsloading(true));
+    const quanty = {
+      quantity: quantity
+    };
+    return axios
+      .put(
+        `https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`,
+        quanty,
+        getConfig()
+      )
+      .then(() => dispatch(getCartThunk()))
+      .finally(() => dispatch(setIsloading(false)));
+}
 export const { setCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

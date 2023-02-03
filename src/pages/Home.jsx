@@ -28,6 +28,21 @@ const Home = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [min,setMin] = useState (0);
+  const [max, setMax] = useState(0);
+
+    const filterAllProducts = productsList.filter(
+      (product) => {
+        product.price <= max && product.price >=min  
+      }
+    );
+
+    const range = (min,max)=>{
+
+      alert(min,max)
+    
+
+    }
 
   const myStylesButton = {
     display: "flex",
@@ -43,30 +58,7 @@ const Home = () => {
       .then((res) => setCategory(res.data));
   }, []);
 
-  // console.log(category);
-      //  const [products, setProducts] = useState([]);
-      //  const [filteredProducts, setFilteredProducts] = useState([]);
-
-      // useEffect(() => {
-      //   const fetchData = async () => {
-      //     const result = await axios.get(
-      //       "https://e-commerce-api-v2.academlo.tech/api/v1/products"
-      //     );
-      //     setProducts(result.data);
-      //     setFilteredProducts(result.data);
-      //   };
-
-      //   fetchData();
-      // }, []);
-
-      // const handleFilter = (priceRange) => {
-      //   setFilteredProducts(
-      //     products.filter(
-      //       (product) =>
-      //         product.price >= priceRange.min && product.price <= priceRange.max
-      //     )
-      //   );
-      // };
+ 
 
       const addProduct = (itemId) => {
         if (localStorage.getItem("token") === "") {
@@ -82,21 +74,50 @@ const Home = () => {
 
   return (
     <div className="container_principal_home">
-      {/* <>
-        <PriceFilter onFilter={handleFilter} />
-        <ul>
-          {filteredProducts.map((product) => (
-            <li key={product.id}>
-              {product.name} ({product.price})
-            </li>
-          ))}
-        </ul>
-      </> */}
-
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton></Offcanvas.Header>
         <Offcanvas.Body>
           <div className="container_filters">
+            <Accordion
+              className=" accordion pe-5 ps-5 mt-5 mb-5"
+              defaultActiveKey="0">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>
+                  <h3>Prices</h3>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <form onSubmit={range}>
+                    <div className="form-group">
+                      <label htmlFor="minPrice">Precio Mínimo:</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        id="minPrice"
+                        name="min"
+                        value={min}
+                        onChange={(e) => setMin(e.target.value)}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="maxPrice">Precio Máximo:</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        id="maxPrice"
+                        name="max"
+                        value={max}
+                        onChange={(e) => setMax(e.target.value)}
+                      />
+                    </div>
+                    <br />
+                    <button type="submit" className="btn btn-primary">
+                      Filtrar
+                    </button>
+                  </form>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+
             <Accordion
               className=" accordion pe-5 ps-5 mt-5 mb-5"
               defaultActiveKey="0">
@@ -158,7 +179,7 @@ const Home = () => {
               <br />
               <div>
                 <div
-                  style={{ cursor:"pointer" }}
+                  style={{ cursor: "pointer" }}
                   onClick={() => navigate(`/product/${product.id}`)}
                   className="container_img_product">
                   <img
