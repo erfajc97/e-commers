@@ -28,21 +28,25 @@ const Home = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [min,setMin] = useState (0);
+  const [min, setMin] = useState(0);
   const [max, setMax] = useState(0);
+  const [productsFiltrados, setProductsFiltrados] = useState([]);
 
-    const filterAllProducts = productsList.filter(
-      (product) => {
-        product.price <= max && product.price >=min  
-      }
-    );
+  useEffect(() => {
+    setProductsFiltrados(productsList);
+  }, [productsList]);
 
-    const range = (min,max)=>{
+ 
 
-      alert(min,max)
+  const range = () => {
     
+    console.log(min);
+    const filterAllProducts = productsList.filter((product) => {
+      return +product.price <= +max && +product.price >= +min;
+    });
 
-    }
+    setProductsFiltrados(filterAllProducts);
+  };
 
   const myStylesButton = {
     display: "flex",
@@ -58,19 +62,17 @@ const Home = () => {
       .then((res) => setCategory(res.data));
   }, []);
 
- 
-
-      const addProduct = (itemId) => {
-        if (localStorage.getItem("token") === "") {
-          navigate("/login/");
-        } else {
-          const productId = {
-            quantity: 1,
-            productId: itemId,
-          };
-          dispatch(addproductIdThunk(productId));
-        }
+  const addProduct = (itemId) => {
+    if (localStorage.getItem("token") === "") {
+      navigate("/login/");
+    } else {
+      const productId = {
+        quantity: 1,
+        productId: itemId,
       };
+      dispatch(addproductIdThunk(productId));
+    }
+  };
 
   return (
     <div className="container_principal_home">
@@ -78,6 +80,7 @@ const Home = () => {
         <Offcanvas.Header closeButton></Offcanvas.Header>
         <Offcanvas.Body>
           <div className="container_filters">
+            <br /> <br />
             <Accordion
               className=" accordion pe-5 ps-5 mt-5 mb-5"
               defaultActiveKey="0">
@@ -174,7 +177,7 @@ const Home = () => {
         </div>
 
         <div className="container_products_list">
-          {productsList?.map((product) => (
+          {productsFiltrados?.map((product) => (
             <div className="products_list" key={product.id}>
               <br />
               <div>
