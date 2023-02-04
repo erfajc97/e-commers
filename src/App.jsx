@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux'
 import ProtectedRoutes from './components/ProtectedRoutes'
 import User from './pages/User'
 import SignUp from './pages/SignUp'
+import Footer from './components/Footer'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -36,6 +37,9 @@ function App() {
             <Route path="/purchases/" element={<Purchases />} />
           </Route>
         </Routes>
+
+
+        <Footer/>
       </HashRouter>
     </div>
   );

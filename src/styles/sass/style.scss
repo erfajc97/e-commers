@@ -383,7 +383,7 @@ li{
 // --------user-----
 .container_principal_user{
   width: 80%;
-  height: 100vh;
+  height: 80vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -445,7 +445,35 @@ li{
   color: rgba(36, 36, 36, 0.744);
 }
 
+// Footer
 
+.container_footer{
+  width: 100%;
+  background-color: rgb(59, 59, 59);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+}
+.container_social_media{
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+.container_icons_social{
+  border: 1px solid;
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.container_icons_social i{
+  color:azure 
+}
 
 @media screen and (min-width: 700px) and (max-width: 989px) {
 
