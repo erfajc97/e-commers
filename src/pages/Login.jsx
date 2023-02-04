@@ -93,7 +93,7 @@ const Login = () => {
         <br />
         <p>
           Don't have an account?{" "}
-          <span onClick={signUp} style={{ color: "darkblue" }}>
+          <span onClick={signUp} style={{ color: "darkblue" , cursor:'pointer'}}>
             Sign up
           </span>
         </p>
