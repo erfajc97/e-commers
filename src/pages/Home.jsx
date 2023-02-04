@@ -80,12 +80,12 @@ const Home = () => {
         <Offcanvas.Body>
           <div className="container_filters">
             <br /> <br />
-           <Accordion
+            <Accordion
               className=" accordion pe-5 ps-5 mt-5 mb-5"
               defaultActiveKey="0">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
-                  <h3>Prices</h3> 
+                  <h3>Prices</h3>
                 </Accordion.Header>
                 <Accordion.Body>
                   <form onSubmit={range}>
@@ -119,7 +119,6 @@ const Home = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
             <Accordion
               className=" accordion pe-5 ps-5 mt-5 mb-5"
               defaultActiveKey="0">
@@ -150,6 +149,8 @@ const Home = () => {
         <div className="container_button_search">
           <br />
           <br />
+          <br />
+          
           <InputGroup className="mb-3">
             <Form.Control
               placeholder="Search your Product"
