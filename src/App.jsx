@@ -10,6 +10,8 @@ import AppNavBar from './components/AppNavBar'
 import Loading from './components/Loading'
 import { useSelector } from 'react-redux'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import User from './pages/User'
+import SignUp from './pages/SignUp'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -19,22 +21,21 @@ function App() {
   return (
     <div className="App">
       <HashRouter>
-        <AppNavBar  />
-        { loading && <Loading/>}
-        <br /><br />
+        <AppNavBar />
+        {loading && <Loading />}
+        <br />
+        <br />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductosDetails />} />
           <Route path="/login/" element={<Login />} />
+          <Route path="/user/" element={<User />} />
+          <Route path="/singUp/" element={<SignUp />} />
 
-          <Route element={ <ProtectedRoutes/> } >
-
-          <Route path="/purchases/" element={<Purchases />} />
-
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/purchases/" element={<Purchases />} />
           </Route>
-
         </Routes>
-
       </HashRouter>
     </div>
   );

@@ -3,6 +3,7 @@ import { Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { deleteProductCarThunk, getCartThunk, purchasesCartThunk, updateCartThunk } from '../store/slices/cart.slice';
+import getConfig from '../utils/getConfig';
 
 const Cart = ({ show, handleClose }) => {
 
@@ -20,7 +21,11 @@ const Cart = ({ show, handleClose }) => {
 
 
     useEffect(()=>{
-        dispatch(getCartThunk());
+        if(localStorage.getItem("token")===""){
+          getConfig()
+        }else{
+          dispatch(getCartThunk());
+        }
     },[])
 
       const incrementRate = (product) => {

@@ -6,14 +6,15 @@ import Cart from './Cart';
 
 
 const AppNavBar = () => {
-
-    const navigate =useNavigate();
-  
-
-    const logout = () =>{
-      localStorage.setItem("token", "");
-      navigate("/login/")
-    }
+     const navigate = useNavigate();
+      const directuser = () => {
+        if (localStorage.getItem("token") === "") {
+          navigate("/login");
+        } else {
+          navigate("/user");
+        }
+      };
+   
 
       const [show, setShow] = useState(false);
 
@@ -31,17 +32,17 @@ const AppNavBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link className="title_links_nav" as={Link} to="/">
+                {/* <Nav.Link className="title_links_nav" as={Link} to="/">
                   Home
-                </Nav.Link>
-                <Nav.Link className="title_links_nav" as={Link} to="/login/">
-                  Login
+                </Nav.Link> */}
+                <Nav.Link className="title_links_nav" onClick={directuser}>
+                 User
                 </Nav.Link>
                 <Nav.Link
                   className="title_links_nav"
                   as={Link}
                   to="/purchases/">
-                  Purchases
+                 Purchases
                 </Nav.Link>
                 <Nav.Link
                   onClick={handleShow}
@@ -49,11 +50,10 @@ const AppNavBar = () => {
                   as={Link}>
                   Cart
                 </Nav.Link>
-                
-                  <Nav.Link className="title_links_nav" onClick={logout}>
+
+                {/* <Nav.Link className="title_links_nav" onClick={logout}>
                     Logout
-                  </Nav.Link>
-              
+                  </Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Container>

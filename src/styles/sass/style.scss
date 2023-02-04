@@ -380,6 +380,63 @@ li{
   padding: 0.5rem 1rem;
 }
 
+// --------user-----
+.container_principal_user{
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.link_logout{
+  
+  border: 0.1rem solid;
+  padding: 5rem 4rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.btn_logout{
+
+  background-color: rgb(30, 30, 30);
+  color: whitesmoke;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.bx-user{
+  border:1px solid;
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+// singUp-----
+
+.container_signUp{
+    width: 80%;
+  height: 100vh;
+  margin: 5rem auto;
+ 
+ 
+}
+
+
+
+
 @media screen and (min-width: 700px) and (max-width: 989px) {
 
   
@@ -402,7 +459,11 @@ li{
   width: 70%;
   margin: 4rem auto;
 }
-
+.container_signUp{
+    width: 70%;
+ 
+ 
+}
 
   
 }
@@ -431,7 +492,11 @@ li{
   width: 60%;
   margin: 4rem auto;
 }
-  
+ .container_signUp{
+    width: 50%;
+ 
+ 
+} 
 }
 
 
@@ -494,6 +559,10 @@ li{
   margin: 4rem auto;
 }
 
+ .container_signUp{
+    width: 50%;
+ 
+} 
   
   
 }
@@ -623,6 +692,9 @@ li{
   width: 40%;
   margin: 4rem auto;
 }
-
+ .container_signUp{
+    width: 40%;
+ 
+} 
 
 }

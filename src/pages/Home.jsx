@@ -28,8 +28,8 @@ const Home = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [min, setMin] = useState("");
-  const [max, setMax] = useState("");
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(0);
   const [productsFiltrados, setProductsFiltrados] = useState([]);
 
   useEffect(() => {

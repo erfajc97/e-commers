@@ -9,9 +9,13 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
 
+  const signUp = () =>{
+    navigate('/singUp/')
+  }
+
   const submit = (data) => {
 
-    console.log(data);
+    // console.log(data);
     
     axios
       .post(`https://e-commerce-api-v2.academlo.tech/api/v1/users/login`, data)
@@ -19,7 +23,7 @@ const Login = () => {
         console.log(res.data);
 
         localStorage.setItem("token", res.data.token)
-        navigate('/')
+        navigate('/user')
 
       }
       )
@@ -46,11 +50,13 @@ const Login = () => {
         <strong className="idication-login">
           You have to Log In to access to your cart
         </strong>
-        <br />
+       
 
         <div className="tex-data-login">
           <strong className="tes-data">Test Data</strong>
+          <br /> <br />
           <i className="bx bx-envelope"> john@gmail.com</i>
+          <br />
           <i className="bx bx-key"> john1234</i>
         </div>
       </div>
@@ -77,12 +83,21 @@ const Login = () => {
         </Form.Group>
 
         <Button
-          
           style={{ position: "absolute", right: "0.5rem" }}
           variant="primary"
           type="submit">
           Submit
         </Button>
+        <br />
+        <br />
+        <br />
+        <br />
+        <p>
+          Don't have an account?{" "}
+          <span onClick={signUp} style={{ color: "darkblue" }}>
+            Sign up
+          </span>
+        </p>
       </Form>
     </div>
   );
