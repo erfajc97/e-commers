@@ -50,14 +50,13 @@ const Login = () => {
         <strong className="idication-login">
           You have to Log In to access to your cart
         </strong>
-       
 
         <div className="tex-data-login">
           <strong className="tes-data">Test Data</strong>
           <br /> <br />
-          <i className="bx bx-envelope"> john@gmail.com</i>
+          <i className="bx bx-envelope"> josegarcia@gmail.com</i>
           <br />
-          <i className="bx bx-key"> john1234</i>
+          <i className="bx bx-key"> 12345</i>
         </div>
       </div>
       <Form onSubmit={handleSubmit(submit)}>

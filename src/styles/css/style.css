@@ -336,6 +336,15 @@ li {
   height: 100vh;
   margin: 5rem auto; }
 
+.inc_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; }
+
+.inc_nav i {
+  color: rgba(36, 36, 36, 0.744); }
+
 @media screen and (min-width: 700px) and (max-width: 989px) {
   .container_suggested ul {
     display: grid;

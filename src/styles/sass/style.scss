@@ -434,6 +434,16 @@ li{
  
 }
 
+.inc_nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inc_nav i{
+  color: rgba(36, 36, 36, 0.744);
+}
 
 
 

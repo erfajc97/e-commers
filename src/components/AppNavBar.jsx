@@ -15,7 +15,7 @@ const AppNavBar = () => {
         }
       };
    
-
+    
       const [show, setShow] = useState(false);
 
       const handleClose = () => setShow(false);
@@ -36,19 +36,27 @@ const AppNavBar = () => {
                   Home
                 </Nav.Link> */}
                 <Nav.Link className="title_links_nav" onClick={directuser}>
-                 User
+                  <p className='inc_nav' >
+                  User <i className="bx bx-user-circle"></i>
+                  </p>
                 </Nav.Link>
                 <Nav.Link
                   className="title_links_nav"
                   as={Link}
                   to="/purchases/">
-                 Purchases
+                    <p className='inc_nav' >
+
+                  Purchases <i className="bx bx-purchase-tag"></i>
+                    </p>
                 </Nav.Link>
                 <Nav.Link
                   onClick={handleShow}
                   className="title_links_nav"
                   as={Link}>
-                  Cart
+                    <p className='inc_nav' >
+
+                  Cart <i className="bx bx-cart"></i>
+                    </p>
                 </Nav.Link>
 
                 {/* <Nav.Link className="title_links_nav" onClick={logout}>
