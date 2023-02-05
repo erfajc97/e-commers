@@ -83,7 +83,17 @@ li{
     transform: scale(1.1);
   }
 }
-
+.sumTotal{
+  border: 2px solid;
+  display: flex;
+  width: 35%;
+  padding: 0.5rem;
+  background-color: rgb(52, 50, 50);
+  color: aliceblue;
+  position: absolute;
+  bottom: 7.5rem;
+  left: 1rem;
+}
 // ----Productos Details---
 
 .phonedescription{
@@ -474,6 +484,9 @@ li{
 .container_icons_social i{
   color:azure 
 }
+
+
+
 
 @media screen and (min-width: 700px) and (max-width: 989px) {
 

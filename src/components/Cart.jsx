@@ -107,6 +107,8 @@ const Cart = ({ show, handleClose }) => {
         <br />
         <br />
         <br />
+        <br />
+        
 
         <div className="container_checkOut">
           <button

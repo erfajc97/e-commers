@@ -18,14 +18,16 @@ export const getProductsTrunk = (state,action) => dispatch => {
     dispatch(setIsloading(true))
     axios
       .get(`https://e-commerce-api-v2.academlo.tech/api/v1/products`)
-      .then((res) => dispatch(setProdcuts(res.data)))
+      .then((res) =>{
+        dispatch(setProdcuts(res.data))
+        window.scrollTo(0, 0);
+      } 
+      )
       .finally(() => {
-            setTimeout(() => {  
-                dispatch(setIsloading(false))
-            }, 500);
-      }
-       
-       );
+        setTimeout(() => {
+          dispatch(setIsloading(false));
+        }, 500);
+      });
 }
 
 export const filterProductThunk = (id) => (dispatch) => {

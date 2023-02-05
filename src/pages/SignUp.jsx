@@ -13,6 +13,7 @@ const SignUp = () => {
       .post("https://e-commerce-api-v2.academlo.tech/api/v1/users", data)
       .then(() => {
         navigate("/login/");
+        window.scrollTo(0, 0);
       });
   };
 

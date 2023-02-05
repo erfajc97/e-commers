@@ -20,6 +20,7 @@ const User = () => {
 
             axios.get("https://e-commerce-api-v2.academlo.tech/api/v1/users/me", getConfig())
             .then(res => setUser(res.data))
+            window.scrollTo(0, 0);
         }
 
     },[])

@@ -59,6 +59,17 @@ li {
   #button-addon2:hover {
     transform: scale(1.1); }
 
+.sumTotal {
+  border: 2px solid;
+  display: flex;
+  width: 35%;
+  padding: 0.5rem;
+  background-color: #343232;
+  color: aliceblue;
+  position: absolute;
+  bottom: 7.5rem;
+  left: 1rem; }
+
 .phonedescription {
   display: none; }
 

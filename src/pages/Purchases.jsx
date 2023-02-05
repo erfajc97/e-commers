@@ -10,6 +10,7 @@ const Purchases = () => {
 
   useEffect(() => {
     dispatch(getPurchasesThunk());
+    window.scrollTo(0, 0);
   }, []);
 
   // console.log(purchases);

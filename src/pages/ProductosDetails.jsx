@@ -23,6 +23,7 @@ const ProductosDetails = () => {
       .then((res) => {
         setProduct(res.data);
         dispatch(filterProductThunk(res.data.category.id));
+        window.scrollTo(0, 0);
         //   console.log(res.data.category.id);
       });
   }, [id]);
@@ -58,6 +59,7 @@ const ProductosDetails = () => {
           productId: itemId,
         };
         dispatch(addproductIdThunk(productId));
+         window.scrollTo(0, 0);
       }
     };
   return (

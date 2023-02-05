@@ -6,6 +6,7 @@ import Cart from './Cart';
 
 
 const AppNavBar = () => {
+  
      const navigate = useNavigate();
       const directuser = () => {
         if (localStorage.getItem("token") === "") {
@@ -21,11 +22,13 @@ const AppNavBar = () => {
       const handleClose = () => setShow(false);
       const handleShow = () => setShow(true);
 
+      
+
     return (
       <div className="container_navBar">
-        <Navbar bg="light" expand="lg" fixed="top">
+        <Navbar  bg="light" expand="lg" fixed="top">
           <Container>
-            <Navbar.Brand className="brand" as={Link} to="/">
+            <Navbar.Brand  className="brand" as={Link} to="/">
               E-Commers
             </Navbar.Brand>
 

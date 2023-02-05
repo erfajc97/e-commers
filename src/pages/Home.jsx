@@ -34,6 +34,7 @@ const Home = () => {
 
   useEffect(() => {
     setProductsFiltrados(productsList);
+    window.scrollTo(0, 0);
   }, [productsList]);
 
  
