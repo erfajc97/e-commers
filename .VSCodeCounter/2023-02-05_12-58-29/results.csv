@@ -1,0 +1,34 @@
+"filename", "language", "JSON", "JavaScript", "HTML", "XML", "JavaScript React", "CSS", "SCSS", "comment", "blank", "total"
+"/home/erfa97/Documentos/React/Entregable_Final/index.html", "HTML", 0, 0, 15, 0, 0, 0, 0, 0, 1, 16
+"/home/erfa97/Documentos/React/Entregable_Final/package-lock.json", "JSON", 2111, 0, 0, 0, 0, 0, 0, 0, 1, 2112
+"/home/erfa97/Documentos/React/Entregable_Final/package.json", "JSON", 29, 0, 0, 0, 0, 0, 0, 0, 1, 30
+"/home/erfa97/Documentos/React/Entregable_Final/public/vite.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"/home/erfa97/Documentos/React/Entregable_Final/src/App.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 41, 1, 42
+"/home/erfa97/Documentos/React/Entregable_Final/src/App.jsx", "JavaScript React", 0, 0, 0, 0, 40, 0, 0, 1, 8, 49
+"/home/erfa97/Documentos/React/Entregable_Final/src/assets/react.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"/home/erfa97/Documentos/React/Entregable_Final/src/components/AppNavBar.jsx", "JavaScript React", 0, 0, 0, 0, 57, 0, 0, 6, 14, 77
+"/home/erfa97/Documentos/React/Entregable_Final/src/components/Cart.jsx", "JavaScript React", 0, 0, 0, 0, 108, 0, 0, 0, 17, 125
+"/home/erfa97/Documentos/React/Entregable_Final/src/components/Footer.jsx", "JavaScript React", 0, 0, 0, 0, 29, 0, 0, 0, 2, 31
+"/home/erfa97/Documentos/React/Entregable_Final/src/components/Loading.jsx", "JavaScript React", 0, 0, 0, 0, 23, 0, 0, 0, 2, 25
+"/home/erfa97/Documentos/React/Entregable_Final/src/components/ProtectedRoutes.jsx", "JavaScript React", 0, 0, 0, 0, 10, 0, 0, 2, 4, 16
+"/home/erfa97/Documentos/React/Entregable_Final/src/index.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 70, 1, 71
+"/home/erfa97/Documentos/React/Entregable_Final/src/main.jsx", "JavaScript React", 0, 0, 0, 0, 14, 0, 0, 0, 2, 16
+"/home/erfa97/Documentos/React/Entregable_Final/src/pages/Home.jsx", "JavaScript React", 0, 0, 0, 0, 211, 0, 0, 1, 22, 234
+"/home/erfa97/Documentos/React/Entregable_Final/src/pages/Login.jsx", "JavaScript React", 0, 0, 0, 0, 88, 0, 0, 1, 17, 106
+"/home/erfa97/Documentos/React/Entregable_Final/src/pages/ProductosDetails.jsx", "JavaScript React", 0, 0, 0, 0, 200, 0, 0, 2, 15, 217
+"/home/erfa97/Documentos/React/Entregable_Final/src/pages/Purchases.jsx", "JavaScript React", 0, 0, 0, 0, 62, 0, 0, 1, 8, 71
+"/home/erfa97/Documentos/React/Entregable_Final/src/pages/SignUp.jsx", "JavaScript React", 0, 0, 0, 0, 71, 0, 0, 0, 8, 79
+"/home/erfa97/Documentos/React/Entregable_Final/src/pages/User.jsx", "JavaScript React", 0, 0, 0, 0, 36, 0, 0, 1, 9, 46
+"/home/erfa97/Documentos/React/Entregable_Final/src/store/index.jsx", "JavaScript React", 0, 0, 0, 0, 13, 0, 0, 0, 2, 15
+"/home/erfa97/Documentos/React/Entregable_Final/src/store/slices/cart.slice.jsx", "JavaScript React", 0, 0, 0, 0, 70, 0, 0, 0, 13, 83
+"/home/erfa97/Documentos/React/Entregable_Final/src/store/slices/isLoading.slice.jsx", "JavaScript React", 0, 0, 0, 0, 13, 0, 0, 0, 6, 19
+"/home/erfa97/Documentos/React/Entregable_Final/src/store/slices/products.slice.jsx", "JavaScript React", 0, 0, 0, 0, 48, 0, 0, 1, 9, 58
+"/home/erfa97/Documentos/React/Entregable_Final/src/store/slices/purchases.slice.jsx", "JavaScript React", 0, 0, 0, 0, 26, 0, 0, 1, 6, 33
+"/home/erfa97/Documentos/React/Entregable_Final/src/styles/css/style.css", "CSS", 0, 0, 0, 0, 0, 465, 0, 1, 97, 563
+"/home/erfa97/Documentos/React/Entregable_Final/src/styles/loading.css", "CSS", 0, 0, 0, 0, 0, 90, 0, 0, 2, 92
+"/home/erfa97/Documentos/React/Entregable_Final/src/styles/nav-bar.css", "CSS", 0, 0, 0, 0, 0, 15, 0, 0, 9, 24
+"/home/erfa97/Documentos/React/Entregable_Final/src/styles/sass/_reset.scss", "SCSS", 0, 0, 0, 0, 0, 0, 13, 0, 6, 19
+"/home/erfa97/Documentos/React/Entregable_Final/src/styles/sass/style.scss", "SCSS", 0, 0, 0, 0, 0, 0, 578, 10, 164, 752
+"/home/erfa97/Documentos/React/Entregable_Final/src/utils/getConfig.js", "JavaScript", 0, 4, 0, 0, 0, 0, 0, 0, 2, 6
+"/home/erfa97/Documentos/React/Entregable_Final/vite.config.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, 1, 2, 8
+"Total", "-", 2140, 9, 15, 2, 1119, 570, 591, 140, 451, 5037

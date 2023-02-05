@@ -1,0 +1,77 @@
+Date : 2023-02-05 12:58:29
+Directory : /home/erfa97/Documentos/React/Entregable_Final
+Total : 32 files,  4446 codes, 140 comments, 451 blanks, all 5037 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          2 |      2,140 |          0 |          2 |      2,142 |
+| JavaScript React |         18 |      1,119 |         17 |        164 |      1,300 |
+| SCSS             |          2 |        591 |         10 |        170 |        771 |
+| CSS              |          5 |        570 |        112 |        110 |        792 |
+| HTML             |          1 |         15 |          0 |          1 |         16 |
+| JavaScript       |          2 |          9 |          1 |          4 |         14 |
+| XML              |          2 |          2 |          0 |          0 |          2 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                   |         32 |      4,446 |        140 |        451 |      5,037 |
+| . (Files)                                                                           |          4 |      2,160 |          1 |          5 |      2,166 |
+| public                                                                              |          1 |          1 |          0 |          0 |          1 |
+| src                                                                                 |         27 |      2,285 |        139 |        446 |      2,870 |
+| src (Files)                                                                         |          4 |         54 |        112 |         12 |        178 |
+| src/assets                                                                          |          1 |          1 |          0 |          0 |          1 |
+| src/components                                                                      |          5 |        227 |          8 |         39 |        274 |
+| src/pages                                                                           |          6 |        668 |          6 |         79 |        753 |
+| src/store                                                                           |          5 |        170 |          2 |         36 |        208 |
+| src/store (Files)                                                                   |          1 |         13 |          0 |          2 |         15 |
+| src/store/slices                                                                    |          4 |        157 |          2 |         34 |        193 |
+| src/styles                                                                          |          5 |      1,161 |         11 |        278 |      1,450 |
+| src/styles (Files)                                                                  |          2 |        105 |          0 |         11 |        116 |
+| src/styles/css                                                                      |          1 |        465 |          1 |         97 |        563 |
+| src/styles/sass                                                                     |          2 |        591 |         10 |        170 |        771 |
+| src/utils                                                                           |          1 |          4 |          0 |          2 |          6 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                            | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/erfa97/Documentos/React/Entregable_Final/index.html                           | HTML             |         15 |          0 |          1 |         16 |
+| /home/erfa97/Documentos/React/Entregable_Final/package-lock.json                    | JSON             |      2,111 |          0 |          1 |      2,112 |
+| /home/erfa97/Documentos/React/Entregable_Final/package.json                         | JSON             |         29 |          0 |          1 |         30 |
+| /home/erfa97/Documentos/React/Entregable_Final/public/vite.svg                      | XML              |          1 |          0 |          0 |          1 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/App.css                          | CSS              |          0 |         41 |          1 |         42 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/App.jsx                          | JavaScript React |         40 |          1 |          8 |         49 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/assets/react.svg                 | XML              |          1 |          0 |          0 |          1 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/components/AppNavBar.jsx         | JavaScript React |         57 |          6 |         14 |         77 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/components/Cart.jsx              | JavaScript React |        108 |          0 |         17 |        125 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/components/Footer.jsx            | JavaScript React |         29 |          0 |          2 |         31 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/components/Loading.jsx           | JavaScript React |         23 |          0 |          2 |         25 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/components/ProtectedRoutes.jsx   | JavaScript React |         10 |          2 |          4 |         16 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/index.css                        | CSS              |          0 |         70 |          1 |         71 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/main.jsx                         | JavaScript React |         14 |          0 |          2 |         16 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/pages/Home.jsx                   | JavaScript React |        211 |          1 |         22 |        234 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/pages/Login.jsx                  | JavaScript React |         88 |          1 |         17 |        106 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/pages/ProductosDetails.jsx       | JavaScript React |        200 |          2 |         15 |        217 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/pages/Purchases.jsx              | JavaScript React |         62 |          1 |          8 |         71 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/pages/SignUp.jsx                 | JavaScript React |         71 |          0 |          8 |         79 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/pages/User.jsx                   | JavaScript React |         36 |          1 |          9 |         46 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/store/index.jsx                  | JavaScript React |         13 |          0 |          2 |         15 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/store/slices/cart.slice.jsx      | JavaScript React |         70 |          0 |         13 |         83 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/store/slices/isLoading.slice.jsx | JavaScript React |         13 |          0 |          6 |         19 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/store/slices/products.slice.jsx  | JavaScript React |         48 |          1 |          9 |         58 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/store/slices/purchases.slice.jsx | JavaScript React |         26 |          1 |          6 |         33 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/styles/css/style.css             | CSS              |        465 |          1 |         97 |        563 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/styles/loading.css               | CSS              |         90 |          0 |          2 |         92 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/styles/nav-bar.css               | CSS              |         15 |          0 |          9 |         24 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/styles/sass/_reset.scss          | SCSS             |         13 |          0 |          6 |         19 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/styles/sass/style.scss           | SCSS             |        578 |         10 |        164 |        752 |
+| /home/erfa97/Documentos/React/Entregable_Final/src/utils/getConfig.js               | JavaScript       |          4 |          0 |          2 |          6 |
+| /home/erfa97/Documentos/React/Entregable_Final/vite.config.js                       | JavaScript       |          5 |          1 |          2 |          8 |
+| Total                                                                               |                  |      4,446 |        140 |        451 |      5,037 |
++-------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
